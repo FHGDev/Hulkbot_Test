@@ -32,7 +32,9 @@ bot.on("message", message => {
   const logcmd = mArray[0].slice(prefix.length)
   const cmd = bot.commands.get(logcmd)
   
-  if (cmd) return cmd.run(bot, message, args);
+  if (cmd) {
+    cmd.run(bot, message, args);
+  }
 })
 
 bot.login(process.env.token)
