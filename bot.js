@@ -23,7 +23,7 @@ bot.on("ready", () => {
 })
 
 bot.on("message", message => {
-  if (!message.content.startsWith(prefix)) return;
+ // if (!message.content.startsWith(prefix)) return;
   if (!message.guild) return;
   if (message.author.bot) return;
   
