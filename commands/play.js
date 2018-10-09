@@ -89,4 +89,6 @@ function isYt(str) {
   return str.toLowerCase().indexOf("youtube.com") > -1;
 }
 
-module.exports.help = {name:"play"}
+module.exports.help = {
+  name: "play"
+}
