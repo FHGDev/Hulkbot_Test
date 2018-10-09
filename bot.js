@@ -19,6 +19,7 @@ fs.readdir('./commands/', (err, files) => {
 
 bot.on("ready", () => {
   console.log(`${bot.user.username} v${pak.version} loaded!`)
+  bot.user.setActivity(`for h;help | Hulkbot Test Edition`, {type: "WATCHING"});
 })
 
 bot.on("message", message => {
@@ -30,6 +31,8 @@ bot.on("message", message => {
   const args = mArray.slice(1)
   const logcmd = mArray[0].slice(prefix.length)
   const cmd = bot.commands.get(logcmd)
+  
+  if (cmd) return cmd.run(bot, message, args);
 })
 
 bot.login(process.env.token)
