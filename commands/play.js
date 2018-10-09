@@ -86,7 +86,7 @@ function searchyt(q, cb) {
 }
 
 function isYt(str) {
-  return str.toLowerCase().indexOf("youtube.com" > -1;
+  return str.toLowerCase().indexOf("youtube.com") > -1;
 }
 
-exports.help["name"] = "play"
+module.exports.help = {name:"play"}
